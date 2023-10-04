@@ -1,3 +1,4 @@
+# This image is WIP
 [![Docker Image CI](https://github.com/joedwards32/CS2/actions/workflows/docker-image.yml/badge.svg?branch=main)](https://github.com/joedwards32/CS2/actions/workflows/docker-image.yml)
 
 # What is Counter-Strike 2?
