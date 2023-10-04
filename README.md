@@ -16,14 +16,14 @@ This Docker image contains the dedicated server of the game.
 
 As of now, you can't download the CS2 dedicated server using `+login anonymous`, as it's part of the CS2 client ([App ID 730](https://steamdb.info/app/730)).
 
-1. Create a fresh Steam account and add CS2 to its library, then store the login inside of a volume.<br/>
+1. [Create a fresh Steam account](https://store.steampowered.com/join/) and add CS2 to its library.<br/>
 
 2. Create required named volume:
 ```console
 $ docker volume create steamcmd_login_volume # Location of login session
 ```
 
-3. Activate the SteamCMD login session, you will be asked to enter your e-mail Steam Guard code once (this will permanently save your login session in `steamcmd_login_volume`). Replace the following fields before executing the command:
+3. Activate the SteamCMD login session, if required enter your e-mail Steam Guard code (this will permanently save your login session in `steamcmd_login_volume`). Replace the following fields before executing the command:
 - [STEAMUSER] - steam username
 - [ACCOUNTPASSWORD] - steam account password
 ```console
