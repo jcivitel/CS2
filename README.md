@@ -1,5 +1,5 @@
 # This image is WIP
-[![Docker Image CI](https://github.com/joedwards32/CS2/actions/workflows/docker-image.yml/badge.svg?branch=main)](https://github.com/joedwards32/CS2/actions/workflows/docker-image.yml)
+[![](https://img.shields.io/codacy/grade/1a72f69b97bc46cfaec6cb77819beb66)](https://hub.docker.com/r/cm2network/cs2/) [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/cm2network/cs2)](https://hub.docker.com/r/cm2network/cs2/) [![Docker Stars](https://img.shields.io/docker/stars/cm2network/cs2.svg)](https://hub.docker.com/r/cm2network/cs2/) [![Docker Pulls](https://img.shields.io/docker/pulls/cm2network/cs2.svg)](https://hub.docker.com/r/cm2network/cs2/) [![](https://img.shields.io/docker/image-size/cm2network/cs2)](https://img.shields.io/docker/image-size/cm2network/cs2) [![Discord](https://img.shields.io/discord/747067734029893653)](https://discord.gg/7ntmAwM)
 
 # What is Counter-Strike 2?
 For over two decades, Counter-Strike has offered an elite competitive experience, one shaped by millions of players from across the globe. And now the next chapter in the CS story is about to begin. This is Counter-Strike 2. 
