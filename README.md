@@ -12,9 +12,24 @@ This Docker image contains the dedicated server of the game.
 # How to use this image
 ## Hosting a simple game server
 
-Running on the *host* interface (recommended):<br/>
+**Initial one-time setup:**
+As of now, you can't download the CS2 dedicated server using `+login anonymous`, as it's part of the CS2 client ([App ID 730](https://steamdb.info/app/730)).
+
+1. Create a fresh Steam account and add CS2 to its library, then store the login inside of a volume.<br/>
+
+2. Create required named volume:
 ```console
-$ docker run -d --net=host --name=cs2 -e STEAMUSER={YOUR_STEAM_USER} -e STEAMPASS={YOUR_STEAM_PASSWD} joedwards32/cs2
+$ docker volume create steamcmd_login_volume # Location of login session
+```
+
+3. Activate the SteamCMD login session, you will be asked to enter your e-mail Steam Guard code once (this will permanently save your login session in `steamcmd_login_volume`). Replace the following fields before executing the command:
+- [STEAMUSER] - steam username
+- [ACCOUNTPASSWORD] - steam account password
+```console
+$ docker run -it --rm \
+    -v "steamcmd_login_volume:/home/steam/Steam" \
+    cm2network/steamcmd \
+    bash /home/steam/steamcmd/steamcmd.sh +login [STEAMUSER] [ACCOUNTPASSWORD] +quit
 ```
 
 Running using a bind mount for data persistence on container recreation:
@@ -54,4 +69,5 @@ CS2_BOT_QUOTA_MODE=""       (fill, competitive)
 
 # Credits
 
-This container leans heavily on the work of [CM2Walki](https://github.com/CM2Walki/), especially his [SteamCMD](https://github.com/CM2Walki/steamcmd) container image. GG!
+This repository is based on [https://github.com/CM2Walki/CSGO](https://github.com/CM2Walki/CSGO) (obsolete as of September 2023).<br/>
+This repository is a fork of and uses code from [https://github.com/joedwards32/CS2](https://github.com/joedwards32/CS2).
