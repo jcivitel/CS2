@@ -42,7 +42,10 @@ $ docker run -it --rm \
 ```console
 $ mkdir -p $(pwd)/cs2-data
 $ chmod 777 $(pwd)/cs2-data # Makes sure the directory is writeable by the unprivileged container user
-$ docker run -d --net=host -v $(pwd)/cs2-data:/home/steam/cs2-dedicated/ --name=cs2-dedicated -e STEAMUSER=[STEAMUSER] cm2network/cs2
+$ docker run -d --net=host \
+    -v $(pwd)/cs2-data:/home/steam/cs2-dedicated/ \
+    -v "steamcmd_login_volume:/home/steam/Steam" \
+    --name=cs2-dedicated -e STEAMUSER=[STEAMUSER] cm2network/cs2
 ```
 
 **The container will automatically update the game on startup, so if there is a game update just restart the container.**
