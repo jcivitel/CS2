@@ -16,7 +16,7 @@ This Docker image contains the dedicated server of the game.
 
 **Initial one-time setup**
 
-As of now, you can't download the CS2 dedicated server using `+login anonymous`, it's part of the CS2 client ([App ID 730](https://steamdb.info/app/730)).
+As of now, you can't download the CS2 dedicated server using `+login anonymous`, as it's part of the ([CS2 client](https://steamdb.info/app/730)).
 
 1. [Create a fresh Steam account](https://store.steampowered.com/join/) and add CS2 to its library.<br/>
 
