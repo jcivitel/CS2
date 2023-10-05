@@ -79,4 +79,4 @@ This repository is based on [https://github.com/CM2Walki/CSGO](https://github.co
 This repository is a fork of and uses code from [https://github.com/joedwards32/CS2](https://github.com/joedwards32/CS2).
 
 # Contributors
-[![Contributors Display](https://badges.pufler.dev/contributors/CM2Walki/csgo?size=50&padding=5&bots=false)](https://github.com/CM2Walki/cs2/graphs/contributors)
+[![Contributors Display](https://badges.pufler.dev/contributors/CM2Walki/cs2?size=50&padding=5&bots=false)](https://github.com/CM2Walki/cs2/graphs/contributors)
