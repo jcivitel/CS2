@@ -10,7 +10,7 @@ ENV STEAMAPP cs2
 ENV STEAMAPPDIR "${HOMEDIR}/${STEAMAPP}-dedicated"
 
 COPY etc/entry.sh "${HOMEDIR}/entry.sh"
-COPY etc/server.cfg "/etc/server.cfg"
+COPY etc/server.cfg "${STEAMAPPDIR}/game/csgo/cfg/server.cfg"
 
 RUN set -x \
 	# Install, update & upgrade packages
