@@ -38,7 +38,7 @@ $ docker run -it --rm \
 **Running a CS2 dedicated server**
 
 4. Run using a bind mount for data persistence on container recreation. Replace the following fields before executing the command:
-- [STEAMUSER] - steam username
+- [STEAMUSER] - steam username (no password required, if you completed step 1)
 ```console
 $ mkdir -p $(pwd)/cs2-data
 $ chmod 777 $(pwd)/cs2-data # Makes sure the directory is writeable by the unprivileged container user
