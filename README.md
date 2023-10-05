@@ -77,3 +77,6 @@ CS2_BOT_QUOTA_MODE=""       (fill, competitive)
 
 This repository is based on [https://github.com/CM2Walki/CSGO](https://github.com/CM2Walki/CSGO) (obsolete as of September 2023).<br/>
 This repository is a fork of and uses code from [https://github.com/joedwards32/CS2](https://github.com/joedwards32/CS2).
+
+# Contributors
+[![Contributors Display](https://badges.pufler.dev/contributors/CM2Walki/csgo?size=50&padding=5&bots=false)](https://github.com/CM2Walki/cs2/graphs/contributors)
