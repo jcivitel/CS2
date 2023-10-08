@@ -53,9 +53,7 @@ $ docker run -d --net=host \
 ## Environment Variables
 Feel free to overwrite these environment variables, using -e (--env): 
 ```dockerfile
-STEAMUSER="changeme"        (Steam User for SteamCMD.)
-STEAMPASS="changeme"        (Password for Steam User.)
-STEAMGUARD=""               (Optional, Steam Guard key if enabled. Use your most recent Steam Guard key.)
+STEAMUSER="changeme"        (Steam user stored in steamcmd_login_volume)
 CS2_SERVERNAME="changeme"   (Set the visible name for your private server)
 CS2_PORT=27015              (CS2 server listen port tcp_udp)
 CS2_LAN="0"                 (0 - LAN mode disabled, 1 - LAN Mode enabled)
