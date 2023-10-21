@@ -32,7 +32,7 @@ cd "${STEAMAPPDIR}/game/bin/linuxsteamrt64"
 	-port "${CS2_PORT}" \
 	-console \
 	-usercon \
-	-maxplayers_override "${CS2_MAXPLAYERS}" \
+	-maxplayers "${CS2_MAXPLAYERS}" \
 	+game_type "${CS2_GAMETYPE}" \
 	+game_mode "${CS2_GAMEMODE}" \
 	+mapgroup "${CS2_MAPGROUP}" \
