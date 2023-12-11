@@ -39,4 +39,6 @@ cd "${STEAMAPPDIR}/game/bin/linuxsteamrt64"
 	+map "${CS2_STARTMAP}" \
 	+rcon_password "${CS2_RCONPW}" \
 	+sv_password "${CS2_PW}" \
+ 	+hostname "${CS2_SERVERNAME}" \
+	+sv_setsteamaccount "${CS2_STEAMTOKEN}" \
 	"${CS2_ADDITIONAL_ARGS}"
