@@ -11,9 +11,7 @@
 For over two decades, Counter-Strike has offered an elite competitive experience, one shaped by millions of players from across the globe. And now the next chapter in the CS story is about to begin. This is Counter-Strike 2.
 This Docker image contains the dedicated server of the game.
 
->  [CS2](https://store.steampowered.com/app/730/CounterStrike_2/)
-
-<img src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg?t=1696011820" alt="logo" width="300"/></img>
+<a href="https://store.steampowered.com/app/730/CounterStrike_2/"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg?t=1696011820" alt="logo" width="300"/></img></a>
 
 # How to use this image
 ## Hosting a simple game server
