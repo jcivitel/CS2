@@ -5,7 +5,7 @@
 -	[`latest` (*bullseye/Dockerfile*)](https://github.com/CM2Walki/CS2/blob/main/bullseye/Dockerfile)
 
 # What is Counter-Strike 2?
-For over two decades, Counter-Strike has offered an elite competitive experience, one shaped by millions of players from across the globe. And now the next chapter in the CS story is about to begin. This is Counter-Strike 2. 
+For over two decades, Counter-Strike has offered an elite competitive experience, one shaped by millions of players from across the globe. And now the next chapter in the CS story is about to begin. This is Counter-Strike 2.
 This Docker image contains the dedicated server of the game.
 
 >  [CS2](https://store.steampowered.com/app/730/CounterStrike_2/)
@@ -19,7 +19,7 @@ This Docker image contains the dedicated server of the game.
 
 As of now, you can't download the CS2 dedicated server using `+login anonymous`, as it's part of the [CS2 client](https://steamdb.info/app/730).
 
-1. [Create a fresh Steam account](https://store.steampowered.com/join/) and add CS2 to its library or use your own. [Optional if you already have an account]<br/> 
+1. [Create a fresh Steam account](https://store.steampowered.com/join/) and add CS2 to its library or use your own. [Optional if you already have an account]<br/>
 
 2. Create required named volume:
 ```console
@@ -53,7 +53,7 @@ $ docker run -d --net=host \
 
 # Configuration
 ## Environment Variables
-Feel free to overwrite these environment variables, using -e (--env): 
+Feel free to overwrite these environment variables, using -e (--env):
 ```dockerfile
 STEAMUSER="changeme"        (Steam user stored in steamcmd_login_volume)
 CS2_SERVERNAME="changeme"   (Set the visible name for your private server)
@@ -78,4 +78,4 @@ This repository is based on [https://github.com/CM2Walki/CSGO](https://github.co
 This repository is a fork of and uses code from [https://github.com/joedwards32/CS2](https://github.com/joedwards32/CS2).
 
 # Contributors
-[![Contributors Display](https://badges.pufler.dev/contributors/CM2Walki/cs2?size=50&padding=5&bots=false)](https://github.com/CM2Walki/cs2/graphs/contributors)
+[![Contributors Display](https://badges.pufler.dev/contributors/jcivitel/cs2?size=50&padding=5&bots=false)](https://github.com/CM2Walki/cs2/graphs/contributors)
