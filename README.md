@@ -1,6 +1,8 @@
-[![](https://img.shields.io/codacy/grade/6b33daa4a447442cbe3b0d97288187ad)](https://hub.docker.com/r/cm2network/cs2/) [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/cm2network/cs2)](https://hub.docker.com/r/cm2network/cs2/) [![Docker Stars](https://img.shields.io/docker/stars/cm2network/cs2.svg)](https://hub.docker.com/r/cm2network/cs2/) [![Docker Pulls](https://img.shields.io/docker/pulls/cm2network/cs2.svg)](https://hub.docker.com/r/cm2network/cs2/) [![](https://img.shields.io/docker/image-size/cm2network/cs2)](https://img.shields.io/docker/image-size/cm2network/cs2) [![Discord](https://img.shields.io/discord/747067734029893653)](https://discord.gg/7ntmAwM)
+[![Docker Pulls](https://img.shields.io/docker/pulls/jcivitell/cs2)](https://hub.docker.com/r/jcivitell/cs2) [![Docker Stars](https://img.shields.io/docker/stars/jcivitell/cs2)](https://hub.docker.com/r/jcivitell/cs2) [![Docker Image Size](https://img.shields.io/docker/image-size/jcivitell/cs2/latest)](https://hub.docker.com/r/jcivitell/cs2)
+
+
 # Supported tags and respective `Dockerfile` links
--	[`base`, `latest` (*bullseye/Dockerfile*)](https://github.com/CM2Walki/CS2/blob/main/bullseye/Dockerfile)
+-	[`latest` (*bullseye/Dockerfile*)](https://github.com/CM2Walki/CS2/blob/main/bullseye/Dockerfile)
 
 # What is Counter-Strike 2?
 For over two decades, Counter-Strike has offered an elite competitive experience, one shaped by millions of players from across the globe. And now the next chapter in the CS story is about to begin. This is Counter-Strike 2. 
