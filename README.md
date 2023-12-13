@@ -1,4 +1,5 @@
 [![](https://img.shields.io/maintenance/yes/2024)](https://github.com/jcivitel/)
+[![Static Badge](https://img.shields.io/badge/GitHub-jcivitell-green?logo=github)](https://github.com/jcivitel/cs2)
 [![Docker Pulls](https://img.shields.io/docker/pulls/jcivitell/cs2)](https://hub.docker.com/r/jcivitell/cs2)
 [![Docker Stars](https://img.shields.io/docker/stars/jcivitell/cs2)](https://hub.docker.com/r/jcivitell/cs2)
 [![Docker Image Size](https://img.shields.io/docker/image-size/jcivitell/cs2/latest)](https://hub.docker.com/r/jcivitell/cs2)
@@ -11,7 +12,7 @@
 For over two decades, Counter-Strike has offered an elite competitive experience, one shaped by millions of players from across the globe. And now the next chapter in the CS story is about to begin. This is Counter-Strike 2.
 This Docker image contains the dedicated server of the game.
 
-<a href="https://store.steampowered.com/app/730/CounterStrike_2/"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg?t=1696011820" alt="logo" width="300"/></img></a>
+<a href="https://store.steampowered.com/app/730/CounterStrike_2/"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg?t=1696011820" alt="logo" width="400"/></img></a>
 
 # How to use this image
 ## Hosting a simple game server
