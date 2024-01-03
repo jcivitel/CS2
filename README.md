@@ -1,8 +1,9 @@
 [![](https://img.shields.io/maintenance/yes/2024)](https://github.com/jcivitel/)
 [![Static Badge](https://img.shields.io/badge/GitHub-jcivitell-green?logo=github)](https://github.com/jcivitel/cs2)
-[![Docker Pulls](https://img.shields.io/docker/pulls/jcivitell/cs2)](https://hub.docker.com/r/jcivitell/cs2)
-[![Docker Stars](https://img.shields.io/docker/stars/jcivitell/cs2)](https://hub.docker.com/r/jcivitell/cs2)
-[![Docker Image Size](https://img.shields.io/docker/image-size/jcivitell/cs2/latest)](https://hub.docker.com/r/jcivitell/cs2)
+[![GitHub Repo stars](https://img.shields.io/github/stars/jcivitel/cs2)](https://github.com/jcivitel/cs2)
+[![Docker Pulls](https://img.shields.io/docker/pulls/jcivitell/cs2?logo=docker)](https://hub.docker.com/r/jcivitell/cs2)
+[![Docker Stars](https://img.shields.io/docker/stars/jcivitell/cs2?logo=docker)](https://hub.docker.com/r/jcivitell/cs2)
+[![Docker Image Size](https://img.shields.io/docker/image-size/jcivitell/cs2/latest?logo=docker)](https://hub.docker.com/r/jcivitell/cs2)
 
 
 # Supported tags and respective `Dockerfile` links
