@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cs2
+  name: cs2-dev
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: cs2
+      app: cs2-dev
   template:
     metadata:
       labels:
-        app: cs2
+        app: cs2-dev
     spec:
       containers:
       - image: jcivitell/cs2:latest
-        name: cs2
+        name: cs2-dev
         ports:
         - containerPort: 27015
