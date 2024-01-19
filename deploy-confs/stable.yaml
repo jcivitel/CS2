@@ -14,7 +14,7 @@ spec:
         app: cs2
     spec:
       containers:
-      - image: jcivitell/cs2:7
+      - image: jcivitell/cs2:9
         name: cs2
         ports:
         - containerPort: 27015
