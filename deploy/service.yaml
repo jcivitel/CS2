@@ -9,4 +9,6 @@ spec:
     - protocol: TCP
       port: 27015
       targetPort: 27015
+      nodePort: 27015
+    type: NodePort
      
