@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: cs2-server
+  name: cs2-server-dev
 spec:
   selector:
     app.kubernetes.io/name: cs2-dev
