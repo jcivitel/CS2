@@ -22,11 +22,11 @@ jobs:
       - setup_remote_docker:
           docker_layer_caching: true
       - run:
-          name: Build Docker image
+          name: build process
           command: |
-            docker build -t jcivitell/$CIRCLE_PROJECT_REPONAME:latest bullseye
-      - run:
-          name: Push application Docker image
-          command: |
+            chmod +x build-helper-scripts/semantic-versioning-now.sh
+            IMAGEVERSION=$(build-helper-scripts/semantic-versioning-now.sh)
+            docker build -t jcivitell/$CIRCLE_PROJECT_REPONAME:$IMAGEVERSION bullseye
             echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
+            docker push jcivitell/$CIRCLE_PROJECT_REPONAME:$IMAGEVERSION
             docker push jcivitell/$CIRCLE_PROJECT_REPONAME:latest
