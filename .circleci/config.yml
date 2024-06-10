@@ -1,0 +1,32 @@
+version: 2.1
+workflows:
+  build:
+    jobs:
+      - build:
+          context:
+            - dockerhub
+jobs:
+  build:
+    working_directory: ~/app
+    docker:
+      - image: cimg/base:current
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
+    steps:
+      - checkout
+      - run:
+          name: Init git submodule
+          command: |
+            git submodule update --init --recursive
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: Build Docker image
+          command: |
+            docker build -t jcivitell/$CIRCLE_PROJECT_REPONAME:latest bullseye
+      - run:
+          name: Push application Docker image
+          command: |
+            echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
+            docker push jcivitell/$CIRCLE_PROJECT_REPONAME:latest
