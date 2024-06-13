@@ -5,6 +5,11 @@ workflows:
       - build:
           context:
             - dockerhub
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
 jobs:
   build:
     working_directory: ~/app
@@ -16,7 +21,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Init git submodule
+          name: Init git submodule && clone build-helper
           command: |
             git submodule update --init --recursive
       - setup_remote_docker:
@@ -24,13 +29,9 @@ jobs:
       - run:
           name: build process
           command: |      
-            docker build -t jcivitell/$CIRCLE_PROJECT_REPONAME bullseye
+            docker compose build
       - run:
           name: upload image
           command: |
-            chmod +x build-helper-scripts/semantic-versioning-now.sh
-            IMAGEVERSION=$(build-helper-scripts/semantic-versioning-now.sh)
             echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
-            docker image tag jcivitell/$CIRCLE_PROJECT_REPONAME jcivitell/$CIRCLE_PROJECT_REPONAME:latest
-            docker image tag jcivitell/$CIRCLE_PROJECT_REPONAME jcivitell/$CIRCLE_PROJECT_REPONAME:$IMAGEVERSION
-            docker push -a jcivitell/$CIRCLE_PROJECT_REPONAME
+            docker compose push --include-deps
