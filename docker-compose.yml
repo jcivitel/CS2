@@ -1,9 +1,9 @@
 version: '3.9'
 services:
-  asterisk-docker:
+  cs2:
     image: jcivitell/cs2
     build:
-      context: .
+      context: bullseye/
       dockerfile: bullseye/Dockerfile
       tags:
       - "jcivitell/cs2:${CIRCLE_BRANCH:-master}"
