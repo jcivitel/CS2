@@ -3,8 +3,8 @@ services:
   cs2:
     image: jcivitell/cs2
     build:
-      context: bullseye/
-      dockerfile: bullseye/Dockerfile
+      context: .
+      dockerfile: Dockerfile
       tags:
       - "jcivitell/cs2:${CIRCLE_BRANCH:-master}"
       - "jcivitell/cs2:${CIRCLE_TAG:-latest}"
