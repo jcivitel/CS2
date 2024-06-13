@@ -3,7 +3,7 @@
 ###########################################################
 FROM cm2network/steamcmd:root as build_stage
 
-MAINTAINER="jan@civitelli.de"
+LABLE maintainer="jan@civitelli.de"
 
 ENV STEAMAPPID 730
 ENV STEAMAPP cs2
