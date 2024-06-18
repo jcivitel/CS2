@@ -9,7 +9,7 @@ workflows:
             tags:
               only: /^v.*/
             branches:
-              ignore: /.*/
+              ignore: /dev*/
 jobs:
   build:
     working_directory: ~/app
