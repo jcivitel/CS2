@@ -9,6 +9,9 @@ ENV STEAMAPPID 730
 ENV STEAMAPP cs2
 ENV STEAMAPPDIR "${HOMEDIR}/${STEAMAPP}-dedicated"
 
+COPY etc/entry.sh "${HOMEDIR}/entry.sh"
+COPY etc/server.cfg "${STEAMAPPDIR}/game/csgo/cfg/server.cfg"
+
 RUN set -x \
 	# Install, update & upgrade packages
 	&& apt-get update \
@@ -16,10 +19,12 @@ RUN set -x \
 		wget \
 		ca-certificates \
 		lib32z1 \
+	&& mkdir -p "${STEAMAPPDIR}" \
+	# Add entry script
+	&& chmod +x "${HOMEDIR}/entry.sh" \
+	&& chown -R "${USER}:${USER}" "${HOMEDIR}/entry.sh" "${STEAMAPPDIR}" \
 	# Clean up
 	&& rm -rf /var/lib/apt/lists/* 
-
-FROM build_stage AS bullseye-base
 
 ENV CS2_SERVERNAME="New \"${STEAMAPP}\" Server" \
     CS2_PORT=27015 \
@@ -33,20 +38,11 @@ ENV CS2_SERVERNAME="New \"${STEAMAPP}\" Server" \
     CS2_LAN=0 \
     CS2_STEAMTOKEN="changeme" \
     CS2_ADDITIONAL_ARGS=""
-	
-RUN set -x \
-	&& mkdir -p "${STEAMAPPDIR}" \
-	# Add entry script
-	&& chmod +x "${HOMEDIR}/entry.sh" \
-	&& chown -R "${USER}:${USER}" "${HOMEDIR}/entry.sh" "${STEAMAPPDIR}"
 
 # Switch to user
 USER ${USER}
 
 WORKDIR ${HOMEDIR}
-
-COPY etc/entry.sh "${HOMEDIR}/entry.sh"
-COPY etc/server.cfg "${STEAMAPPDIR}/game/csgo/cfg/server.cfg"
 
 CMD ["bash", "entry.sh"]
 
